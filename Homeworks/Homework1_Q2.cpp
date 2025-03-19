@@ -8,7 +8,7 @@ int main( void )
    int integer2; /* second number to be input by user */
    int x;      /* variable in which sum will be stored */ 
 
-   printf("Enter first integer\n"); /* prompt */
+   printf( "Enter first integer\n"); /* prompt */
    scanf( "%d", &integer1 );        /* read an integer */
 
    printf( "Enter second integer\n" ); /* prompt */
