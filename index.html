@@ -14,6 +14,27 @@
         <!-- Homework files will be listed here -->
     </ul>
     
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const homeworkList = document.getElementById("homework-list");
+            
+            // List of homework files (add new files here)
+            const files = [
+                "homeworks/homework1.pdf",
+                "homeworks/homework2.docx",
+                "homeworks/homework3.txt"
+            ];
+            
+            files.forEach(file => {
+                let listItem = document.createElement("li");
+                let link = document.createElement("a");
+                link.href = file;
+                link.textContent = file.split("/").pop();
+                link.setAttribute("target", "_blank");
+                listItem.appendChild(link);
+                homeworkList.appendChild(listItem);
+            });
+        });
+    </script>
 </body>
 </html>
