@@ -323,6 +323,17 @@ section {
     font-weight: 500;
 }
 
+.repo-stars {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+
 .repo-link {
     color: var(--primary-color);
     text-decoration: none;
@@ -339,70 +350,67 @@ section {
 }
 
 /* ===================================
-   Homeworks Section
+   Skills Section
    =================================== */
-#homeworks {
+
+#skills {
     background: white;
 }
 
-.homework-grid {
-    max-width: 800px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.file-list {
-    list-style: none;
-    display: grid;
-    gap: 1rem;
-}
-
-.file-list li {
+.skill-category {
     background: var(--bg-secondary);
-    border-radius: 0.5rem;
-    transition: var(--transition);
+    border-radius: 0.75rem;
+    padding: 2rem;
     border: 2px solid var(--border-color);
-}
-
-.file-list li:hover {
-    border-color: var(--primary-color);
-    transform: translateX(5px);
-}
-
-.file-list a {
-    display: block;
-    padding: 1.25rem 1.5rem;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-}
-
-.file-list a::before {
-    content: '📄'; /* Default file icon */
-    margin-right: 0.75rem;
-    font-size: 1.25rem;
-}
-
-/* File extension-specific icons */
-.file-list a[href$=".cpp"]::before {
-    content: '💻';
-}
-
-.file-list a[href$=".pdf"]::before {
-    content: '📋';
-}
-
-.file-list a::after {
-    content: '→';
-    position: absolute;
-    right: 1.5rem;
-    opacity: 0;
     transition: var(--transition);
 }
 
-.file-list li:hover a::after {
-    opacity: 1;
-    right: 1rem;
+.skill-category:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.skill-category h3 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 /* ===================================
@@ -454,6 +462,13 @@ section {
     width: 24px;
     height: 24px;
     fill: currentColor; /* Ensures SVG icon color changes with text color */
+}
+
+.contact-note {
+    margin-top: 2rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-style: italic;
 }
 
 /* ===================================
