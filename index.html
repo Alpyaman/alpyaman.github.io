@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Data Scientist and Machine Learning Specialist. View Alpyaman's portfolio showcasing core projects in sales forecasting, deep learning classification, and algorithmic trading.">
-    <meta name="keywords" content="Data Scientist, Machine Learning, Embedded Systems, Python, C++, TensorFlow, LightGBM, Algorithmic Trading, Sales Forecasting, Deep Learning Portfolio">
-    <meta name="author" content="Alpyaman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Data Scientist and Machine Learning Specialist. View Alp Yaman's portfolio showcasing AI projects including Agentic RAG systems, document assistants, web scraping, sales forecasting, deep learning classification, and algorithmic trading.">
+    <meta name="keywords" content="Data Scientist, Machine Learning, AI, RAG, Agentic RAG, LangChain, Document Assistant, Web Scraping, Embedded Systems, Python, C++, TensorFlow, LightGBM, Algorithmic Trading, Sales Forecasting, Deep Learning Portfolio">
+    <meta name="author" content="Alp Yaman">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alpyaman.github.io/">
+    <meta property="og:title" content="ALP YAMAN | Data Scientist & ML Specialist Portfolio">
+    <meta property="og:description" content="Portfolio showcasing AI & ML projects including Agentic RAG systems, document assistants, web scraping, algorithmic trading, and deep learning solutions.">
+    <meta property="og:site_name" content="Alp Yaman Portfolio">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alpyaman.github.io/">
+    <meta property="twitter:title" content="ALP YAMAN | Data Scientist & ML Specialist Portfolio">
+    <meta property="twitter:description" content="Portfolio showcasing AI & ML projects including Agentic RAG systems, document assistants, web scraping, algorithmic trading, and deep learning solutions.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alpyaman.github.io/">
+
     <title>ALP YAMAN | Data Scientist Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://api.github.com">
 </head>
 <body>
 
@@ -67,7 +86,7 @@
 
     <section id="skills" class="container">
         <h2 class="section-title">Technical Competencies</h2>
-        <p class="section-subtitle">Programming, ML Frameworks, and Data Tools</p>
+        <p class="section-subtitle">Programming, AI/ML Frameworks, RAG Systems, and Development Tools</p>
 
         <div class="skills-grid">
             <div class="skill-category">
@@ -81,7 +100,7 @@
             </div>
 
             <div class="skill-category">
-                <h3>ML Frameworks</h3>
+                <h3>ML & DL Frameworks</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">TensorFlow</span>
                     <span class="skill-tag">PyTorch</span>
@@ -91,7 +110,28 @@
             </div>
 
             <div class="skill-category">
-                <h3>Tools & Platforms</h3>
+                <h3>AI & RAG Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">RAG Systems</span>
+                    <span class="skill-tag">Vector Databases</span>
+                    <span class="skill-tag">LLM Integration</span>
+                    <span class="skill-tag">AI Agents</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Data & Web Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Web Scraping</span>
+                    <span class="skill-tag">Selenium</span>
+                    <span class="skill-tag">BeautifulSoup</span>
+                    <span class="skill-tag">Data Pipelines</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Development Tools</h3>
                 <div class="skill-tags">
                     <span class="skill-tag">Git</span>
                     <span class="skill-tag">Docker</span>
@@ -131,151 +171,6 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Load GitHub repositories on page load
-        document.addEventListener("DOMContentLoaded", function() {
-            loadGitHubRepos();
-        });
-
-        // Load GitHub repositories dynamically
-        async function loadGitHubRepos() {
-            const reposContainer = document.getElementById("github-repos");
-
-            // Static repository data (customize with your actual repos)
-            const staticRepos = [
-                {
-                    name: "Automated_Trading_System",
-                    description: "PPO agent model for cryptocurrency trading using stable-Baselines3, achieving 68% annual return.",
-                    html_url: "https://github.com/Alpyaman/Automated_Trading_System",
-                    language: "Python",
-                    topics: ["reinforcement-learning", "crypto-trading", "PPO"],
-                    stargazers_count: 0
-                },
-                {
-                    name: "Sales_Forecasting_Project",
-                    description: "Retail sales forecasting model built using LightGBM with advanced feature engineering.",
-                    html_url: "https://github.com/Alpyaman/Sales_Forecasting_Project",
-                    language: "Python",
-                    topics: ["lightgbm", "time-series", "sales-forecasting"],
-                    stargazers_count: 0
-                },
-                {
-                    name: "Plant_Disease_Classifier",
-                    description: "Deep learning image classification to detect 15 plant diseases using MobileNetV2 Transfer Learning.",
-                    html_url: "https://github.com/Alpyaman/Plant_Disease_Classifier",
-                    language: "Python",
-                    topics: ["deep-learning", "cnn", "image-classification"],
-                    stargazers_count: 0
-                },
-                // The GitHub API fetch will load actual repos, these serve as robust fallbacks
-            ];
-
-            // Try to fetch from GitHub API, fallback to static data
-            try {
-                const response = await fetch('https://api.github.com/users/Alpyaman/repos?sort=updated&per_page=6');
-
-                if (!response.ok) {
-                    throw new Error('API request failed');
-                }
-
-                const repos = await response.json();
-
-                if (Array.isArray(repos) && repos.length > 0 && !repos.message) {
-                    displayRepos(repos);
-                } else {
-                    displayRepos(staticRepos);
-                }
-            } catch (error) {
-                console.log('Using static repository data');
-                displayRepos(staticRepos);
-            }
-        }
-
-        function displayRepos(repos) {
-            const reposContainer = document.getElementById("github-repos");
-            reposContainer.innerHTML = '';
-
-            // Filter out forks if you want to show only original repos
-            const filteredRepos = repos.filter(repo => !repo.fork);
-            const displayRepos = filteredRepos.length > 0 ? filteredRepos.slice(0, 6) : repos.slice(0, 6);
-
-            displayRepos.forEach(repo => {
-                const repoCard = document.createElement("div");
-                repoCard.className = "project-card";
-
-                const repoName = document.createElement("h3");
-                repoName.textContent = repo.name;
-
-                const repoDesc = document.createElement("p");
-                repoDesc.textContent = repo.description || "A Machine Learning or Engineering project by Alp Yaman.";
-
-                const repoMeta = document.createElement("div");
-                repoMeta.className = "repo-meta";
-
-                if (repo.language) {
-                    const language = document.createElement("span");
-                    language.className = "repo-language";
-                    language.textContent = repo.language;
-                    repoMeta.appendChild(language);
-                }
-
-                if (repo.stargazers_count > 0) {
-                    const stars = document.createElement("span");
-                    stars.className = "repo-stars";
-                    stars.textContent = `⭐ ${repo.stargazers_count}`;
-                    repoMeta.appendChild(stars);
-                }
-
-                const repoLink = document.createElement("a");
-                repoLink.href = repo.html_url;
-                repoLink.textContent = "View on GitHub →";
-                repoLink.className = "repo-link";
-                repoLink.setAttribute("target", "_blank");
-
-                repoCard.appendChild(repoName);
-                repoCard.appendChild(repoDesc);
-                repoCard.appendChild(repoMeta);
-                repoCard.appendChild(repoLink);
-
-                reposContainer.appendChild(repoCard);
-            });
-        }
-
-        // Add active state to navigation on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
