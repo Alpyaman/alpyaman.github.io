@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çanakkale Teknoloji Doktoru | Elektronik Servis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-microchip"></i> TechDoktor
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#why-us">Neden Biz?</a></li>
+                    <li><a href="#tracking">Cihaz Takibi</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="lang-toggle">
+                <span class="active">TR</span> | <span>EN</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Çanakkale’nin Güvenilir Elektronik Ev Aletleri Doktoru</h1>
+            <p class="sub-headline">Robot Süpürge, Airfryer, Kahve Makinesi ve Küçük Ev Aletleri tamirinde uzman. 6 ay garantili hizmet.</p>
+            <p class="slogan">"Cihazınızı çöpe atmayın, hayata döndürelim."</p>
+            <a href="https://wa.me/905555555555" class="cta-button"><i class="fab fa-whatsapp"></i> Hemen Teklif Al</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robot Süpürge Tamiri</h3>
+                    <p>Batarya değişimi, sensör arızaları ve anakart onarımları.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire-burner"></i>
+                    <h3>Airfryer & Fritöz</h3>
+                    <p>Isıtma sorunları, fan arızaları ve elektronik kart tamiri.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mug-hot"></i>
+                    <h3>Kahve Makineleri</h3>
+                    <p>Su akıtma, öğütücü arızaları ve periyodik bakım hizmetleri.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-blender"></i>
+                    <h3>Küçük Ev Aletleri</h3>
+                    <p>Blender, mikser, ütü ve diğer ev aletleriniz için hızlı onarım.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+            <h2>Neden Bizi Seçmelisiniz?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Orijinal Parça Garantisi</h4>
+                    <p>Tüm onarımlarımızda kaliteli ve garantili yedek parçalar kullanıyoruz.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h4>Hızlı Teslimat</h4>
+                    <p>Ev aletlerinizden uzun süre ayrı kalmamanız için hızlı onarım ve teslimat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repair Tracking Concept -->
+    <section id="tracking" class="tracking">
+        <div class="container">
+            <h2>Cihaz Durumu Sorgulama</h2>
+            <p>Cihazınızın onarım durumunu öğrenmek için telefon numaranızı girin.</p>
+            <form class="tracking-form" onsubmit="event.preventDefault(); checkStatus();">
+                <input type="tel" id="phone-input" placeholder="05XX XXX XX XX" required>
+                <button type="submit" class="btn-secondary">Sorgula</button>
+            </form>
+            <div id="tracking-result" class="hidden">
+                <!-- Result will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>İletişim & Konum</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Saat Kulesi Yakını, Merkez / Çanakkale</p>
+                    <p><i class="fas fa-phone"></i> +90 555 555 55 55</p>
+                    <p><i class="fas fa-envelope"></i> info@techdoktorcanakkale.com</p>
+                </div>
+                <div class="map-placeholder">
+                    <!-- Embed Google Maps iframe here -->
+                    <div class="mock-map">Google Maps Entegrasyonu (Çanakkale)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/905555555555" class="floating-wa" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
